@@ -7,6 +7,8 @@ const CITIES = [
   { city: "Paris", zone: "Europe/Paris" },
   { city: "Dubai", zone: "Asia/Dubai" },
   { city: "Mumbai", zone: "Asia/Kolkata" },
+  { city: "Delhi", zone: "Asia/Kolkata" },
+  { city: "Kathmandu", zone: "Asia/Kathmandu" },
   { city: "Singapore", zone: "Asia/Singapore" },
   { city: "Tokyo", zone: "Asia/Tokyo" },
   { city: "Sydney", zone: "Australia/Sydney" },
