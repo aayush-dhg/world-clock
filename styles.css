@@ -1,0 +1,131 @@
+:root {
+  --bg: #0f1419;
+  --bg-card: #1a222c;
+  --text: #eef3f8;
+  --muted: #9aa8b6;
+  --accent: #7ec8e3;
+  --line: rgba(255, 255, 255, 0.08);
+  --night: #2a3544;
+  --day: #243246;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, #1b2a3a 0%, var(--bg) 48%),
+    var(--bg);
+  color: var(--text);
+}
+
+.site-header,
+main,
+footer {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding: 3rem 0 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 600;
+}
+
+.local-summary {
+  margin: 0;
+  color: var(--muted);
+  text-align: right;
+  max-width: 22rem;
+}
+
+.clock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.clock-card {
+  background: linear-gradient(180deg, var(--bg-card), #151c24);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem 1.25rem 1.1rem;
+  min-height: 168px;
+}
+
+.clock-card.is-day {
+  background: linear-gradient(180deg, var(--day), #18202a);
+}
+
+.clock-card.is-night {
+  background: linear-gradient(180deg, var(--night), #121820);
+}
+
+.city {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.zone {
+  margin: 0.25rem 0 1.1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.time {
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.date {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.offset {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+footer {
+  padding-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .local-summary {
+    text-align: left;
+  }
+}
